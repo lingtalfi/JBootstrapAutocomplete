@@ -28,7 +28,7 @@ Or just download it and place it where you want otherwise.
 What is this
 =============
 
-This planet is a port from the [bootstrap autocomplete plugin found on jqueryscript.net](https://www.jqueryscript.net/form/jQuery-Bootstrap-4-Typeahead-Plugin.html) 
+This planet is a port from the [bootstrap autocomplete plugin](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 
 to the [universe](https://github.com/karayabin/universe-snapshot).
 
 I host it as a planet for dependency resolution convenience inside my universe framework, but all credits
@@ -38,6 +38,10 @@ goes to the guy who wrote this plugin and posted it on jqueryscript.net.
 
 How to use
 ==========
+
+
+See the [documentation for bootstrap-autocomplete](https://github.com/bassjobsen/Bootstrap-3-Typeahead) for more details. 
+
 
 First type your html:
 
@@ -135,6 +139,10 @@ $(".typeahead").typeahead({
 History Log
 =============
 
+- 1.0.2 -- 2019-11-15
+
+    - fix README.md sources
+    
 - 1.0.1 -- 2019-11-15
 
     - fix README.md typo
