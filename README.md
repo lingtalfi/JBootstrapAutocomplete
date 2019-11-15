@@ -31,6 +31,12 @@ What is this
 This planet is a port from the [bootstrap autocomplete plugin](https://github.com/bassjobsen/Bootstrap-3-Typeahead) 
 to the [universe](https://github.com/karayabin/universe-snapshot).
 
+I also included the blood hound engine from [twitter typeahead](https://github.com/twitter/typeahead.js/blob/master/doc/jquery_typeahead.md)
+and some custom css.
+
+See the [documentation for bloodhound](https://github.com/twitter/typeahead.js/blob/master/doc/bloodhound.md) for more details,
+and/or the [typeahead examples](http://twitter.github.io/typeahead.js/examples/). 
+
 I host it as a planet for dependency resolution convenience inside my universe framework, but all credits
 goes to the guy who wrote this plugin and posted it on jqueryscript.net.
 
@@ -75,13 +81,19 @@ Load the data from an external JSON file
 ---------
 
 ```js
-$.get("data.json", function(data){
-  $(".typeahead").typeahead({ 
-    source:data 
-  });
-},'json');
 
-
+$(".typeahead").typeahead({ 
+    source: function (query, process) {
+        $.ajax({
+            url: '/test.json',
+            type: 'POST',
+            dataType: 'JSON',
+            success: function (data) {
+                process(data);
+            }
+        });
+    },
+});
 ```
 
 
@@ -139,6 +151,10 @@ $(".typeahead").typeahead({
 History Log
 =============
 
+- 1.1.0 -- 2019-11-15
+
+    - add bloodhound and custom css
+    
 - 1.0.2 -- 2019-11-15
 
     - fix README.md sources
