@@ -24,13 +24,6 @@ Or just download it and place it where you want otherwise.
 
 
 
-Summary
-===========
-- [JBootstrapAutocomplete api](https://github.com/lingtalfi/JBootstrapAutocomplete/blob/master/doc/api/Ling/JBootstrapAutocomplete.md) (generated with [DocTools](https://github.com/lingtalfi/DocTools))
-
-
-
-
 
 What is this
 =============
@@ -142,6 +135,10 @@ $(".typeahead").typeahead({
 History Log
 =============
 
+- 1.0.1 -- 2019-11-15
+
+    - fix README.md typo
+    
 - 1.0.0 -- 2019-11-15
 
     - initial commit
